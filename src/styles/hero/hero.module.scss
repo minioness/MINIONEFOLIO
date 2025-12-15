@@ -1,0 +1,201 @@
+.hero {
+  position: relative;
+  min-width: 100%;
+  min-height: 100vh;
+  background: #292638;
+  overflow: hidden;
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  left: 20%;
+  top: 30%;
+
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.cluster {
+  position: absolute;
+  width: 420px;
+  height: 110px;
+}
+
+/* 태블릿 이하 */
+@media (max-width: 768px) {
+  .cluster {
+    width: 300px;
+    height: 90px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 480px) {
+  .cluster {
+    width: 220px;
+    height: 70px;
+  }
+}
+
+/* 별 공통 스타일 */
+.dot {
+  position: absolute;
+  border-radius: 999px;
+}
+
+.wBig {
+  left: 40px;
+  top: 20px;
+  width: 15px;
+  height: 15px;
+  background: #8e82cc;
+  filter: blur(5px);
+}
+
+.wSmall {
+  left: 340px;
+  top: 33px;
+  width: 10px;
+  height: 10px;
+  background: #8e82cc;
+  filter: blur(3px);
+}
+
+/* 민트 */
+.green {
+  left: 110px;
+  top: 40px;
+  width: 5px;
+  height: 5px;
+  background: #75e0ac;
+}
+
+.green2 {
+  left: 300px;
+  top: 80px;
+  width: 5px;
+  height: 5px;
+  background: #75e0ac;
+}
+
+/* 노랑 */
+.yellow {
+  left: 270px;
+  top: 40px;
+  width: 11px;
+  height: 11px;
+  background: #ada359;
+}
+
+/* 보라 */
+.purple {
+  left: 80px;
+  top: 80px;
+  width: 10px;
+  height: 10px;
+  background: #b756bf;
+}
+
+// 궤도 영역
+.orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 760px;
+  height: auto;
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+.orbitLine {
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+}
+
+.ship {
+  position: absolute;
+  z-index: 3;
+
+  left: 50%;
+  top: 22.2%;
+  transform: translate(-50%, -50%) rotate(46deg);
+
+  width: 50px;
+  height: auto;
+}
+
+// 소개 영역
+.hero_center {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  z-index: 2;
+
+  .hero_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 3.5rem;
+    font-weight: 700;
+
+    color: white;
+
+    position: relative;
+
+    .line2_color {
+      color: #eecc6e;
+    }
+
+    .line3_color {
+      color: #d25633;
+    }
+
+    .line4_color {
+      color: #8e82cc;
+    }
+  }
+
+  .scroll {
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+
+    width: 40px;
+    height: 70px;
+
+    border-radius: 999px;
+    border: 2px solid white;
+    background: #292638;
+
+    .wheel {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      border: 2px solid white;
+      background: white;
+
+      left: 9px;
+      top: 5px;
+    }
+  }
+}
