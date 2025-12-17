@@ -1,5 +1,7 @@
+import { useEffect, useState } from "react";
 import styles from "../../styles/hero/hero.module.scss";
 import IntroTitle from "./IntroTitle";
+import type { HeroStep } from "../../types/hero";
 
 const clusters = [
   // ── TOP 라인  ──
@@ -28,6 +30,21 @@ const clusters = [
 ];
 
 export default function Hero() {
+  const [step, setStep] = useState<HeroStep>("typing");
+
+  useEffect(() => {
+    if (step !== "orbit") return;
+
+    const t = setTimeout(() => {
+      setStep("scroll");
+    }, 5000);
+
+    return () => clearTimeout(t);
+  }, [step]);
+
+  const showOrbit = step !== "typing";
+  const showScroll = step == "scroll";
+
   return (
     <section className={styles.hero}>
       {/* 별 레이어 */}
@@ -49,7 +66,11 @@ export default function Hero() {
       </div>
 
       {/* 궤도 영역 */}
-      <svg className={styles.orbit} viewBox="0 0 600 420" aria-hidden="true">
+      <svg
+        className={`${styles.orbit} ${showOrbit ? styles.showOrbit : ""}`}
+        viewBox="0 0 600 420"
+        aria-hidden="true"
+      >
         <ellipse
           className={styles.orbitLine}
           cx="300"
@@ -59,17 +80,22 @@ export default function Hero() {
         />
       </svg>
 
-      <div className={styles.orbitArea} aria-hidden="true">
+      <div
+        className={`${styles.orbitArea} ${showOrbit ? styles.showOrbit : ""}`}
+        aria-hidden="true"
+      >
         <img src="/ship.svg" alt="" className={styles.ship} />
       </div>
 
       {/* 소개 영역 */}
       <div className={styles.heroCenter}>
         {/* 텍스트 */}
-        <IntroTitle />
+        <IntroTitle onTypingDone={() => setStep("orbit")} />
 
         {/* 스크롤 아이콘 */}
-        <div className={styles.scroll}>
+        <div
+          className={`${styles.scroll} ${showScroll ? styles.showScroll : ""}`}
+        >
           <div className={styles.wheel} />
         </div>
       </div>

@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "../../styles/hero/title.module.scss";
 import { textHighlight } from "../../utils/TextHighlight";
+import type { titleDone } from "../../types/hero";
 
 const L1 = "안녕하세요";
 
@@ -13,12 +14,14 @@ const R3 = " 개발자";
 const H4 = "민희원";
 const R4 = " 입니다";
 
-export default function IntroTitle() {
+export default function IntroTitle({ onTypingDone }: titleDone) {
   const [startIntro, setStartIntro] = useState(false);
   // 현재 줄에서 몇 글자까지 보여줄지
   const [charCount, setCharCount] = useState(0);
   // 지금 몇 번째 줄을 타이핑 중인지
   const [lineIndex, setLineIndex] = useState(0);
+
+  const doneCalledRef = useRef(false);
 
   useEffect(() => {
     // 첫 렌더가 끝난 다음에 startIntro를 true로 바꿔서
@@ -28,38 +31,45 @@ export default function IntroTitle() {
     return () => window.clearTimeout(t);
   }, []);
 
+  const getCurrentLen = (idx: number) => {
+    if (idx === 0) return L1.length;
+    if (idx === 1) return H2.length + R2.length;
+    if (idx === 2) return H3.length + R3.length;
+    return H4.length + R4.length; // idx === 3
+  };
+
   useEffect(() => {
     if (!startIntro) return;
 
     // 현재 줄 길이 계산
-    const currentLen =
-      lineIndex === 0
-        ? L1.length
-        : lineIndex === 1
-        ? H2.length + R2.length
-        : lineIndex === 2
-        ? H3.length + R3.length
-        : H4.length + R4.length;
+    const currentLen = getCurrentLen(lineIndex);
 
     // 현재 줄이 끝났으면 다음 줄로
     if (charCount >= currentLen) {
-      if (lineIndex >= 3) return;
+      if (lineIndex >= 3) {
+        if (!doneCalledRef.current) {
+          doneCalledRef.current = true;
+          onTypingDone?.();
+        }
 
-      const t = window.setTimeout(() => {
+        return;
+      }
+
+      const t = setTimeout(() => {
         setLineIndex((prev) => prev + 1);
         setCharCount(0);
       }, 200);
 
-      return () => window.clearTimeout(t);
+      return () => clearTimeout(t);
     }
 
-    // 아직이면 한 글자 추가
-    const t = window.setTimeout(() => {
+    // 아직이면 한 글자씩 보여주기
+    const t = setTimeout(() => {
       setCharCount((prev) => prev + 1);
     }, 120);
 
-    return () => window.clearTimeout(t);
-  }, [startIntro, lineIndex, charCount]);
+    return () => clearTimeout(t);
+  }, [startIntro, lineIndex, charCount, onTypingDone]);
 
   const getCountForLine = (idx: number) => {
     if (idx < lineIndex) return Infinity; // 이전 줄: 전부 보여주기
