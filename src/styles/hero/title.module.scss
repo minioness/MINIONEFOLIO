@@ -1,0 +1,51 @@
+.heroText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 3.5rem;
+  font-weight: 700;
+
+  color: white;
+
+  position: relative;
+}
+
+.pointYellow {
+  color: #eecc6e;
+}
+.pointRed {
+  color: #d25633;
+}
+.pointPurple {
+  color: #8e82cc;
+}
+
+.introLine {
+  margin: 0;
+  line-height: 1.2;
+  opacity: 0;
+}
+
+.startIntro .introLine {
+  animation: showUp 600ms ease forwards;
+}
+
+@keyframes showUp {
+  to {
+    opacity: 1;
+  }
+}
+
+.delay1 {
+  animation-delay: 0ms;
+}
+.delay2 {
+  animation-delay: 200ms;
+}
+.delay3 {
+  animation-delay: 400ms;
+}
+.delay4 {
+  animation-delay: 600ms;
+}

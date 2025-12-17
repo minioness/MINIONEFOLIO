@@ -1,4 +1,5 @@
 import styles from "../../styles/hero/hero.module.scss";
+import IntroTitle from "./IntroTitle";
 
 const clusters = [
   // ── TOP 라인  ──
@@ -53,28 +54,19 @@ export default function Hero() {
           className={styles.orbitLine}
           cx="300"
           cy="210"
-          rx="300"
+          rx="290"
           ry="200"
         />
       </svg>
 
-      <img src="/ship.svg" alt="" className={styles.ship} aria-hidden="true" />
+      <div className={styles.orbitArea} aria-hidden="true">
+        <img src="/ship.svg" alt="" className={styles.ship} />
+      </div>
 
       {/* 소개 영역 */}
-      <div className={styles.hero_center}>
+      <div className={styles.heroCenter}>
         {/* 텍스트 */}
-        <div className={styles.hero_text}>
-          <span className={styles.line1}>안녕하세요</span>
-          <span className={styles.line2}>
-            <span className={styles.line2_color}>사용자 경험</span>을 고민하는
-          </span>
-          <span className={styles.line3}>
-            <span className={styles.line3_color}>프론트엔드</span> 개발자
-          </span>
-          <span className={styles.line4}>
-            <span className={styles.line4_color}>민희원</span> 입니다
-          </span>
-        </div>
+        <IntroTitle />
 
         {/* 스크롤 아이콘 */}
         <div className={styles.scroll}>
