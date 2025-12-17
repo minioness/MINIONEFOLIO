@@ -46,7 +46,7 @@ export default function Hero() {
   const showScroll = step == "scroll";
 
   return (
-    <section className={styles.hero}>
+    <section id="hero" className={styles.hero}>
       {/* 별 레이어 */}
       <div className={styles.stars} aria-hidden="true">
         {clusters.map((pos, i) => (
