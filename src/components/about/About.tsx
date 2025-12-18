@@ -2,8 +2,12 @@ import styles from "../../styles/about/About.module.scss";
 import memoji from "../../assets/images/me.svg";
 import GitHub from "../../assets/icons/GItHub.svg";
 import Velog from "../../assets/icons/Velog.svg";
+import { useState } from "react";
+import TurningPointModal from "./TurningPointModal";
 
 export default function About() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <section id="about" className={styles.about}>
       {/* 타이틀 */}
@@ -81,7 +85,16 @@ export default function About() {
           </div>
 
           {/* 버튼 */}
-          <button>버튼 하나가 바꾼 길 보러가기</button>
+          <button className={styles.button} onClick={() => setModalOpen(true)}>
+            버튼 하나가 바꾼 길 보러가기
+          </button>
+
+          {modalOpen && (
+            <TurningPointModal
+              isOpen={modalOpen}
+              onClose={() => setModalOpen(false)}
+            />
+          )}
         </div>
       </div>
     </section>

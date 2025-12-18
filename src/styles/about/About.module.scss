@@ -126,5 +126,22 @@
         }
       }
     }
+
+    .background {
+      margin-bottom: 50px;
+    }
+
+    .button {
+      border: 3px solid #8e82cc;
+      border-radius: 50px;
+      color: #8e82cc;
+      font-size: 1.5rem;
+      font-weight: 700;
+      background-color: transparent;
+
+      padding: 0.5rem 1.5rem;
+
+      cursor: pointer;
+    }
   }
 }
