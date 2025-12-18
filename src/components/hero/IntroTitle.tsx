@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import styles from "../../styles/hero/title.module.scss";
+import styles from "../../styles/hero/IntroTitle.module.scss";
 import { textHighlight } from "../../utils/TextHighlight";
 import type { titleDone } from "../../types/hero";
 

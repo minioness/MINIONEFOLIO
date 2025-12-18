@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "../../styles/hero/hero.module.scss";
+import styles from "../../styles/hero/Hero.module.scss";
 import IntroTitle from "./IntroTitle";
 import type { HeroStep } from "../../types/hero";
 
