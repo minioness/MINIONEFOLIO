@@ -26,20 +26,22 @@
   gap: 12px;
   margin-bottom: 30px;
 
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+
   p {
     margin: 0;
-    font-size: 1rem;
-    line-height: 1.7;
   }
 
   .pointPurple {
     color: #8e82cc;
-    font-weight: 700;
+    font-weight: 500;
   }
 
   .pointRed {
     color: #d25633;
-    font-weight: 700;
+    font-weight: 500;
   }
 }
 
