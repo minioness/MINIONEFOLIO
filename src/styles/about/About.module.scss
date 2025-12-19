@@ -15,7 +15,7 @@
   line-height: 1.75rem;
   font-weight: 700;
 
-  padding: 0.8rem 1.5rem;
+  padding: 1rem 1.2rem 0.8rem;
   border-radius: 50px;
 }
 
@@ -49,19 +49,22 @@
 
       p {
         padding: 0;
-        margin: 0;
+        margin: 0 0 0.3rem 0;
 
         font-size: 1rem;
         line-height: 1.5rem;
+        color: #404040;
       }
 
       p:nth-child(2) {
         font-size: 1.7rem;
         font-weight: 700;
+        letter-spacing: 0.5rem;
       }
 
       p:nth-child(3) {
         color: #727171;
+        font-weight: 300;
       }
     }
 
@@ -88,14 +91,15 @@
 
       .detailTitle {
         color: #8e82cc;
-        font-size: 1.7rem;
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        font-weight: 500;
 
-        border-left: 5px solid #8e82cc;
-        padding-left: 20px;
+        border-left: 4px solid #8e82cc;
+        padding: 0.35rem 0 0 1rem;
 
         display: flex;
         align-items: center;
-        line-height: 1;
       }
 
       .detail {
@@ -109,14 +113,17 @@
         .major {
           display: grid;
           grid-template-columns: 90px 1fr;
-          column-gap: 20px;
+          column-gap: 10px;
+
+          margin: 0.5rem 0 0 1.5rem;
 
           p,
           a {
             color: #404040;
             margin: 0;
             padding: 0;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            font-weight: 300;
             line-height: 1.5;
           }
 
@@ -128,18 +135,18 @@
     }
 
     .background {
-      margin-bottom: 50px;
+      margin-bottom: 2rem;
     }
 
     .button {
-      border: 3px solid #8e82cc;
+      border: 2px solid #8e82cc;
       border-radius: 50px;
       color: #8e82cc;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: 700;
       background-color: transparent;
 
-      padding: 0.5rem 1.5rem;
+      padding: 0.5rem 1rem;
 
       cursor: pointer;
     }
