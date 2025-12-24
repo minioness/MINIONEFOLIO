@@ -1,4 +1,4 @@
-import type { SkillSection } from "../../types/skills";
+import type { SkillSection } from "../types/skills";
 
 export const SKILLS_DATA: SkillSection[] = [
   {
