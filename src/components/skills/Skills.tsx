@@ -1,5 +1,5 @@
 import styles from "../../styles/skills/Skills.module.scss";
-import { SKILLS_DATA } from "./skillsData";
+import { SKILLS_DATA } from "../../data/skillsData";
 
 export default function Skills() {
   return (
