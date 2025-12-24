@@ -1,0 +1,23 @@
+export type EducationItem = {
+  date: string;
+  title: string;
+  hasDetail?: boolean;
+};
+
+export type EducationYear = {
+  year: number;
+  items: EducationItem[];
+};
+
+export type DetailItem = {
+  text: string;
+  children?: DetailItem[];
+};
+
+export type EducationDetail = {
+  id: string;
+  title: string;
+  period: string;
+  tag: string;
+  items: DetailItem[];
+};
