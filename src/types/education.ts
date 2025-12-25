@@ -1,4 +1,5 @@
 export type EducationItem = {
+  id?: string;
   date: string;
   title: string;
   hasDetail?: boolean;
