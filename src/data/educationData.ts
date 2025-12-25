@@ -15,6 +15,7 @@ export const EDUCATION_DATA: EducationYear[] = [
     year: 2024,
     items: [
       {
+        id: "dx-school",
         date: "2024.06 - 2024.12",
         title: "LG전자 DX School 부트캠프",
         hasDetail: true,
@@ -30,6 +31,7 @@ export const EDUCATION_DATA: EducationYear[] = [
     year: 2025,
     items: [
       {
+        id: "zero-base",
         date: "2025.02 - 2025.08",
         title: "제로베이스 - 프론트엔드 취업 스쿨 36기",
         hasDetail: true,
