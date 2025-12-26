@@ -1,3 +1,4 @@
+import { PROJECT_ROLE_STYLE } from "../../constants/projectRoleStyle";
 import styles from "../../styles/projects/ProjectCard.module.scss";
 import type { ProjectItem } from "../../types/projects";
 
@@ -56,11 +57,19 @@ export default function ProjectCard({ project }: Props) {
           <span className={styles.label}>역할</span>
 
           <div className={styles.roles}>
-            {project.roles.map((r) => (
-              <span key={r} className={styles.role}>
-                {r}
-              </span>
-            ))}
+            {project.roles.map((r) => {
+              const s = PROJECT_ROLE_STYLE[r];
+
+              return (
+                <span
+                  key={r}
+                  className={styles.role}
+                  style={{ backgroundColor: s.bg }}
+                >
+                  {r}
+                </span>
+              );
+            })}
           </div>
         </div>
       </div>
