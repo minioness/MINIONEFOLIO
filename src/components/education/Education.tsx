@@ -79,7 +79,7 @@ export default function Education() {
         </div>
 
         {/* 자세히 보기 카드 */}
-        <aside>
+        <aside className={styles.sidePanel}>
           {selectedDetail && (
             <EducationDetailCard
               detail={selectedDetail}

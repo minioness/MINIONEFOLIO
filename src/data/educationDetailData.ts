@@ -8,12 +8,12 @@ export const EDUCATION_DETAIL_DATA: EducationDetail[] = [
     tag: "데이터 기반 서비스 기획",
     items: [
       {
-        text: "시장 데이터 분석(TF-IDF, LDA, 크롤링)을 활용한 ",
+        text: "시장 데이터 분석(TF-IDF, LDA, 크롤링)을 활용한 \n ",
         highlightText: "문제 정의·인사이트 도출",
       },
 
       {
-        text: "고객 경험 기반의 서비스 구조 설계 및 기능 기획",
+        text: "고객 경험 기반의 ",
         highlightText: "서비스 구조 설계 및 기능 기획",
       },
 
@@ -40,11 +40,11 @@ export const EDUCATION_DETAIL_DATA: EducationDetail[] = [
     tag: "프론트엔드 취업 스쿨 36기",
     items: [
       {
-        text: "HTML/CSS/JavaScript 기반의 웹 기본기 및 DOM 조작 학습",
+        text: "HTML/CSS/JavaScript 기반의 웹 기본기 및 \n DOM 조작 학습",
       },
 
       {
-        text: "React 기반 컴포넌트 개발, 상태 관리, 라우팅 등 SPA 구조 이해",
+        text: "React 기반 컴포넌트 개발, 상태 관리, 라우팅 등 \n SPA 구조 이해",
       },
 
       {

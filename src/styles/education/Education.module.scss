@@ -42,122 +42,145 @@
   }
 }
 
-.body {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 1000px;
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 0;
+  gap: 28px;
 
-  margin: 5rem auto 0;
+  align-items: start;
 
-  .yearGroup {
-    display: grid;
-    grid-template-columns: 90px 36px 1fr;
-    column-gap: 28px;
-    align-items: stretch;
+  margin-top: 5rem;
 
-    .year {
-      font-size: 1.5rem;
-      line-height: 1.5rem;
-      font-weight: 500;
-      color: #8e82cc;
+  .body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
 
-      margin-top: 0.5rem;
+    margin: 0 auto;
 
-      display: flex;
-      justify-content: flex-end;
-    }
+    .yearGroup {
+      display: grid;
+      grid-template-columns: 90px 36px 1fr;
+      column-gap: 28px;
+      align-items: stretch;
 
-    .lineDot {
-      display: flex;
-      flex-direction: column;
+      .year {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        font-weight: 500;
+        color: #8e82cc;
 
-      position: relative;
-      width: 36px;
+        margin-top: 0.5rem;
 
-      .dot {
-        position: absolute;
-        top: 0px;
-        left: 50%;
-
-        width: 35px;
-        height: 35px;
-        transform: translateX(-50%);
-        border-radius: 50%;
-
-        background: #fbfaff;
-        border: 5px solid #8a7fc4;
-        z-index: 2;
+        display: flex;
+        justify-content: flex-end;
       }
 
-      .line {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-
-        width: 5px;
-        transform: translateX(-50%);
-        background: #8e82cc;
-      }
-    }
-
-    .items {
-      display: flex;
-      flex-direction: column;
-
-      gap: 2rem;
-      margin-bottom: 3rem;
-
-      .item {
+      .lineDot {
         display: flex;
         flex-direction: column;
-        align-items: self-start;
 
-        .date {
-          margin: 0.7rem 0 0.5rem;
+        position: relative;
+        width: 36px;
 
-          font-size: 1rem;
-          line-height: 1rem;
-          font-weight: 300;
+        .dot {
+          position: absolute;
+          top: 0px;
+          left: 50%;
+
+          width: 35px;
+          height: 35px;
+          transform: translateX(-50%);
+          border-radius: 50%;
+
+          background: #fbfaff;
+          border: 5px solid #8a7fc4;
+          z-index: 2;
         }
 
-        .itemDesc {
+        .line {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 50%;
+
+          width: 5px;
+          transform: translateX(-50%);
+          background: #8e82cc;
+        }
+      }
+
+      .items {
+        display: flex;
+        flex-direction: column;
+
+        gap: 2rem;
+        margin-bottom: 3rem;
+
+        .item {
           display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 0.5rem;
+          flex-direction: column;
+          align-items: self-start;
 
-          .title {
-            font-size: 1.1rem;
-            line-height: 1.5rem;
-            font-weight: 500;
-            margin: 0.3rem 0 0;
-          }
-
-          .moreBtn {
-            border: 2px solid #727171;
-            border-radius: 30px;
-
-            padding: 0.05rem 0.8rem;
-
-            background-color: #fbfaff;
-            color: #727171;
+          .date {
+            margin: 0.7rem 0 0.5rem;
 
             font-size: 1rem;
-            font-weight: 500;
+            line-height: 1rem;
+            font-weight: 300;
+          }
 
-            text-align: center;
-            cursor: pointer;
+          .itemDesc {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+
+            .title {
+              font-size: 1.1rem;
+              line-height: 1.5rem;
+              font-weight: 500;
+              margin: 0.3rem 0 0;
+            }
+
+            .moreBtn {
+              border: 2px solid #727171;
+              border-radius: 30px;
+
+              padding: 0.05rem 0.8rem;
+
+              background-color: #fbfaff;
+              color: #727171;
+
+              font-size: 1rem;
+              font-weight: 500;
+
+              text-align: center;
+              cursor: pointer;
+            }
           }
         }
       }
     }
-  }
 
-  .yearGroup:last-child {
-    .line {
-      display: none;
+    .yearGroup:last-child {
+      .line {
+        display: none;
+      }
     }
   }
+
+  .sidePanel {
+    overflow: hidden;
+    min-width: 0;
+  }
+}
+
+.timelineArea {
+  min-width: 0;
+}
+
+.isModalOpen {
+  grid-template-columns: 1fr 520px; /* 카드 열렸을 때 */
 }
