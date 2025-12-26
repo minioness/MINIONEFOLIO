@@ -26,25 +26,39 @@ export default function EducationDetailCard({ detail, onClose }: Props) {
 
       <div className={styles.items}>
         <ul className={styles.list}>
-          {detail.items.map((item, idx) => (
-            <li key={`${item.text}-${idx}`} className={styles.listItem}>
-              <span className={styles.text}>{item.text}</span>
+          {detail.items.map((item, idx) => {
+            const isLastItem = idx === detail.items.length - 1;
 
-              {/*  children이 있는 경우 */}
-              {item.children?.length ? (
-                <ul className={styles.subList}>
-                  {item.children.map((child, cIdx) => (
-                    <li
-                      key={`${child.text}-${cIdx}`}
-                      className={styles.subListItem}
-                    >
-                      <span className={styles.text}>{child.text}</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-            </li>
-          ))}
+            return (
+              <li key={`${item.text}-${idx}`} className={styles.listItem}>
+                <span className={styles.text}>{item.text}</span>
+
+                {item.highlightText && (
+                  <span
+                    className={`${styles.text} ${
+                      isLastItem ? styles.highlightRed : styles.highlightBlack
+                    }`}
+                  >
+                    {item.highlightText}
+                  </span>
+                )}
+
+                {/*  children이 있는 경우 */}
+                {item.children?.length ? (
+                  <ul className={styles.subList}>
+                    {item.children.map((child, cIdx) => (
+                      <li
+                        key={`${child.text}-${cIdx}`}
+                        className={styles.subListItem}
+                      >
+                        <span className={styles.text}>{child.text}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>
