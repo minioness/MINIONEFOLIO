@@ -1,0 +1,81 @@
+.card {
+  position: relative;
+
+  border: 1px solid #404040;
+  border-radius: 30px;
+
+  padding: 2rem;
+
+  .links {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+
+    display: flex;
+    gap: 0.8rem;
+
+    .link {
+      background-color: #fbfaff;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+
+      img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    .thumbnail {
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    .headText {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      h3 {
+        font-size: 1.5rem;
+        line-height: 1.6rem;
+        font-weight: 700;
+
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.1rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+
+    font-size: 1rem;
+    line-height: 1.1rem;
+    font-weight: 300;
+    color: #404040;
+
+    margin-top: 1.5rem;
+
+    .row {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+    }
+  }
+}

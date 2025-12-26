@@ -1,0 +1,55 @@
+.projects {
+  width: 100%;
+  max-width: 1300px;
+
+  padding: 72px 40px;
+  margin: 72px auto 0;
+}
+
+.titleArea {
+  display: flex;
+  align-items: center;
+
+  gap: 1.5rem;
+
+  .title {
+    display: inline-block;
+    background: #8a7fc4;
+    color: white;
+
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+
+    padding: 1rem 1.2rem 0.8rem;
+    border-radius: 50px;
+  }
+
+  .desc {
+    margin: 0;
+    padding-top: 0.3rem;
+
+    font-size: 1rem;
+    font-weight: 300;
+
+    span {
+      display: inline;
+      background: linear-gradient(
+        transparent 50%,
+        rgba(142, 130, 204, 0.29) 50%
+      );
+    }
+  }
+}
+
+.body {
+  width: 100%;
+
+  margin-top: 5rem;
+
+  .gridArea {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+}
