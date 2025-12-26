@@ -12,6 +12,7 @@ export type EducationYear = {
 
 export type DetailItem = {
   text: string;
+  highlightText?: string;
   children?: DetailItem[];
 };
 

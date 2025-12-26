@@ -8,11 +8,13 @@ export const EDUCATION_DETAIL_DATA: EducationDetail[] = [
     tag: "데이터 기반 서비스 기획",
     items: [
       {
-        text: "시장 데이터 분석(TF-IDF, LDA, 크롤링)을 활용한 문제 정의·인사이트 도출",
+        text: "시장 데이터 분석(TF-IDF, LDA, 크롤링)을 활용한 ",
+        highlightText: "문제 정의·인사이트 도출",
       },
 
       {
         text: "고객 경험 기반의 서비스 구조 설계 및 기능 기획",
+        highlightText: "서비스 구조 설계 및 기능 기획",
       },
 
       {
@@ -25,7 +27,8 @@ export const EDUCATION_DETAIL_DATA: EducationDetail[] = [
       },
 
       {
-        text: "분석-기획-UX 전 과정을 경험하며 \n 프론트엔드 개발 시 사용자 흐름·기능 설계에 강점을 보유",
+        text: "분석-기획-UX 전 과정을 경험하며 \n",
+        highlightText: "프론트엔드 개발 시 사용자 흐름·기능 설계에 강점을 보유",
       },
     ],
   },
@@ -64,7 +67,8 @@ export const EDUCATION_DETAIL_DATA: EducationDetail[] = [
         text: "Git/GitHub 기반 협업 및 PR 방식 실습",
       },
       {
-        text: "실제 서비스 형태의 프로젝트를 진행하며 \n 기획 → UI 구현 → 상태 관리 → 배포까지 전 과정을 경험",
+        text: "실제 서비스 형태의 프로젝트를 진행하며 \n",
+        highlightText: "기획 → UI 구현 → 상태 관리 → 배포까지 전 과정을 경험",
       },
     ],
   },
