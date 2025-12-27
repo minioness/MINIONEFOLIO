@@ -1,10 +1,39 @@
+.cardWrap {
+  position: relative;
+}
+
+.shadowLayer {
+  position: absolute;
+  inset: 0;
+
+  background: #404040;
+  border-radius: 30px;
+
+  opacity: 0;
+
+  transition: opacity 300ms ease-in-out;
+
+  z-index: 0;
+}
+
 .card {
   position: relative;
 
   border: 1px solid #404040;
+  background: #fbfaff;
   border-radius: 30px;
 
   padding: 2rem;
+
+  cursor: pointer;
+
+  transition: transform 300ms ease-in-out;
+
+  z-index: 1;
+
+  &:hover {
+    transform: translate(-10px, -10px);
+  }
 
   .links {
     position: absolute;
@@ -87,4 +116,50 @@
     padding: 0.4rem 0.8rem 0.2em;
     border-radius: 20px;
   }
+}
+
+.techs {
+  display: flex;
+  align-items: center;
+
+  gap: 0.5rem;
+
+  margin-top: 2rem;
+
+  .techIcon {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 10px;
+  }
+}
+
+.btn {
+  position: absolute;
+
+  right: 20px;
+  bottom: 30px;
+  border: none;
+  border-radius: 999px;
+
+  background: #404040;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+
+  padding: 0.2rem 0.8rem 0.3rem;
+
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+
+  pointer-events: none;
+}
+
+.cardWrap:hover .shadowLayer {
+  opacity: 1;
+}
+
+.cardWrap:hover .btn {
+  opacity: 1;
+  pointer-events: auto;
 }
