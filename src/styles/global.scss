@@ -1,0 +1,46 @@
+/* -------------------------------
+   1) 폰트 선언 
+--------------------------------*/
+@font-face {
+  font-family: "SB-Aggro";
+  src: url("../assets/fonts/SB-Aggro-L.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SB-Aggro";
+  src: url("../assets/fonts/SB-Aggro-M.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SB-Aggro";
+  src: url("../assets/fonts/SB-Aggro-B.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* -------------------------------
+   2) 기본 스타일 
+--------------------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: "SB-Aggro", sans-serif;
+  background: #fbfaff;
+  // color: $color-text;
+}

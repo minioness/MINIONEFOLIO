@@ -1,0 +1,186 @@
+.education {
+  width: 100%;
+  max-width: 1300px;
+
+  padding: 90px 40px;
+  margin: 90px auto 0;
+}
+
+.titleArea {
+  display: flex;
+  align-items: center;
+
+  gap: 1.5rem;
+
+  .title {
+    display: inline-block;
+    background: #8a7fc4;
+    color: white;
+
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+
+    padding: 1rem 1.2rem 0.8rem;
+    border-radius: 50px;
+  }
+
+  .desc {
+    margin: 0;
+    padding-top: 0.3rem;
+
+    font-size: 1rem;
+    font-weight: 300;
+
+    span {
+      display: inline;
+      background: linear-gradient(
+        transparent 50%,
+        rgba(142, 130, 204, 0.29) 50%
+      );
+    }
+  }
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 0;
+  gap: 28px;
+
+  align-items: start;
+
+  margin-top: 5rem;
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    .yearGroup {
+      display: grid;
+      grid-template-columns: 90px 36px 1fr;
+      column-gap: 28px;
+      align-items: stretch;
+
+      .year {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        font-weight: 500;
+        color: #8e82cc;
+
+        margin-top: 0.5rem;
+
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .lineDot {
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+        width: 36px;
+
+        .dot {
+          position: absolute;
+          top: 0px;
+          left: 50%;
+
+          width: 35px;
+          height: 35px;
+          transform: translateX(-50%);
+          border-radius: 50%;
+
+          background: #fbfaff;
+          border: 5px solid #8a7fc4;
+          z-index: 2;
+        }
+
+        .line {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 50%;
+
+          width: 5px;
+          transform: translateX(-50%);
+          background: #8e82cc;
+        }
+      }
+
+      .items {
+        display: flex;
+        flex-direction: column;
+
+        gap: 2rem;
+        margin-bottom: 3rem;
+
+        .item {
+          display: flex;
+          flex-direction: column;
+          align-items: self-start;
+
+          .date {
+            margin: 0.7rem 0 0.5rem;
+
+            font-size: 1rem;
+            line-height: 1rem;
+            font-weight: 300;
+          }
+
+          .itemDesc {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+
+            .title {
+              font-size: 1.1rem;
+              line-height: 1.5rem;
+              font-weight: 500;
+              margin: 0.3rem 0 0;
+            }
+
+            .moreBtn {
+              border: 2px solid #727171;
+              border-radius: 30px;
+
+              padding: 0.05rem 0.8rem;
+
+              background-color: #fbfaff;
+              color: #727171;
+
+              font-size: 1rem;
+              font-weight: 500;
+
+              text-align: center;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .yearGroup:last-child {
+      .line {
+        display: none;
+      }
+    }
+  }
+
+  .sidePanel {
+    overflow: hidden;
+    min-width: 0;
+  }
+}
+
+.timelineArea {
+  min-width: 0;
+}
+
+.isModalOpen {
+  grid-template-columns: 1fr 520px; /* 카드 열렸을 때 */
+}

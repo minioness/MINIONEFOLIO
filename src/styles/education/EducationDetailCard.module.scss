@@ -1,0 +1,130 @@
+.detailCard {
+  display: flex;
+  flex-direction: column;
+
+  width: fit-content;
+
+  border: 1px solid #8e82cc;
+  border-radius: 30px;
+
+  background-color: #ffffff;
+  padding: 2rem 2rem 1.2rem;
+
+  position: relative;
+
+  .closeBtn {
+    position: absolute;
+
+    cursor: pointer;
+
+    right: 3%;
+    top: 4%;
+
+    width: 28px;
+    height: 28px;
+
+    color: #8e82cc;
+    font-weight: 700;
+    border: 2px solid #8e82cc;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+
+  .header {
+    border-left: 7px solid #8e82cc;
+    padding-left: 1.2rem;
+
+    color: #404040;
+
+    margin-bottom: 1.5rem;
+
+    .title {
+      font-size: 1.5rem;
+      line-height: 1.7rem;
+      font-weight: 700;
+
+      margin: 0 0 10px;
+      color: #404040;
+    }
+
+    .period {
+      margin: 0;
+      padding: 0;
+
+      font-size: 1rem;
+      line-height: 1.1rem;
+      font-weight: 300;
+    }
+  }
+
+  .tag {
+    border: 1px solid #000000;
+    border-radius: 30px;
+
+    padding: 0.4rem 0.8rem 0.2rem;
+
+    font-size: 1rem;
+    line-height: 1.1rem;
+    font-weight: 300;
+
+    width: fit-content;
+  }
+
+  .items {
+    margin: 1.5rem 0 0;
+    .list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      font-size: 1.1rem;
+      line-height: 1.1rem;
+      font-weight: 300;
+
+      .listItem {
+        position: relative;
+        margin-bottom: 0.8rem;
+        padding-left: 1.2rem; // 점 + 여백 확보
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0.2rem;
+
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: #404040;
+        }
+
+        .text {
+          white-space: pre-line;
+          line-height: 1.3rem;
+        }
+
+        .highlightBlack {
+          font-weight: 500;
+          color: #000000;
+        }
+
+        .highlightRed {
+          font-weight: 500;
+          color: #d25633;
+        }
+
+        .subList {
+          font-size: 1.1rem;
+          line-height: 1.1rem;
+
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          margin-top: 0.5rem;
+          padding-left: 1.5rem;
+        }
+      }
+    }
+  }
+}
