@@ -50,7 +50,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
 
     links: {
       gitHub: "https://github.com/CoHouseTeam",
-      web: "https://cohouse.vercel.app",
+      web: "https://cohouse-client.vercel.app/",
     },
 
     notion:
@@ -70,6 +70,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "ReactNative",
       "ReactQuery",
       "ReactHookForm",
+      "Redux",
       "Axios",
       "Expo",
       "Vercel",
@@ -91,7 +92,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     period: "2025.12.10 - 진행중",
     members: "1명",
     roles: ["기획", "디자인", "개발"],
-    techs: ["TypeScript", "React", "CSS", "Vite", "Vercel"],
+    techs: ["TypeScript", "React", "Sass", "Vite", "Vercel"],
     thumbnail: "/projectLogo/minionefolio.svg",
 
     links: {
