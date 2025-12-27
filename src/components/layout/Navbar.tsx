@@ -1,19 +1,9 @@
 import { useEffect, useState } from "react";
 import styles from "../../styles/layout/NavBar.module.scss";
+import { handleMove } from "../../utils/handleMove";
 
 export default function NavBar() {
   const [isHero, setIsHero] = useState(true);
-
-  const handleMove = (id: string) => {
-    const target = document.getElementById(id);
-
-    if (!target) return;
-
-    target.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
 
   useEffect(() => {
     const hero = document.getElementById("hero");
@@ -26,6 +16,7 @@ export default function NavBar() {
     });
 
     observer.observe(hero);
+    return () => observer.disconnect();
   }, []);
 
   return (
