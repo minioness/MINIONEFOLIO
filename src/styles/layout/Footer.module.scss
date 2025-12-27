@@ -1,0 +1,18 @@
+.footer {
+  width: 95%;
+
+  padding: 50px 40px;
+  margin: 90px auto 0;
+
+  border-top: 1px solid #8f8f8f;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    color: #727171;
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+}
