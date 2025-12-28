@@ -6,6 +6,7 @@ import { EDUCATION_DETAIL_DATA } from "../../data/educationDetailData";
 
 export default function Education() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   // id로 상세 데이터 찾기
   const selectedDetail = useMemo(() => {
@@ -16,7 +17,13 @@ export default function Education() {
 
   const isModalOpen = Boolean(selectedDetail);
 
-  const closeDetail = () => setSelectedId(null);
+  const closeDetail = () => {
+    setIsOpen(false);
+
+    setTimeout(() => {
+      setSelectedId(null);
+    }, 250);
+  };
 
   return (
     <section id="education" className={styles.education}>
@@ -64,7 +71,10 @@ export default function Education() {
                           <button
                             type="button"
                             className={styles.moreBtn}
-                            onClick={() => setSelectedId(item.id!)}
+                            onClick={() => {
+                              setSelectedId(item.id!);
+                              setIsOpen(true);
+                            }}
                           >
                             자세히 보기
                           </button>
@@ -84,6 +94,7 @@ export default function Education() {
             <EducationDetailCard
               detail={selectedDetail}
               onClose={closeDetail}
+              isOpen={isOpen}
             />
           )}
         </aside>

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
 
-  width: fit-content;
+  width: 520px;
 
   border: 1px solid #8e82cc;
   border-radius: 30px;
@@ -11,6 +11,10 @@
   padding: 2rem 2rem 1.2rem;
 
   position: relative;
+
+  opacity: 0;
+  transform: translateX(16px);
+  transition: opacity 250ms ease, transform 250ms ease;
 
   .closeBtn {
     position: absolute;
@@ -127,4 +131,14 @@
       }
     }
   }
+}
+
+.open {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.closed {
+  opacity: 0;
+  transform: translateX(16px);
 }
