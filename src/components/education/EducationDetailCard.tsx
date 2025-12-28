@@ -4,11 +4,18 @@ import type { EducationDetail } from "../../types/education";
 type Props = {
   detail: EducationDetail;
   onClose: () => void;
+  isOpen: boolean;
 };
 
-export default function EducationDetailCard({ detail, onClose }: Props) {
+export default function EducationDetailCard({
+  detail,
+  onClose,
+  isOpen,
+}: Props) {
   return (
-    <div className={styles.detailCard}>
+    <div
+      className={`${styles.detailCard} ${isOpen ? styles.open : styles.closed}`}
+    >
       <button type="button" onClick={onClose} className={styles.closeBtn}>
         ✕
       </button>
