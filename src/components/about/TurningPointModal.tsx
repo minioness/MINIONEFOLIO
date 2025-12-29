@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 import styles from "../../styles/about/TurningPointModal.module.scss";
 
+import TestTube from "../../assets/icons/TestTube.svg";
+import ShipPurple from "../../assets/icons/ShipPurple.svg";
+import Code from "../../assets/icons/Code.svg";
+
 type Props = {
   isOpen: boolean;
   onClose: () => void;
@@ -24,7 +28,25 @@ export default function TurningPointModal({ isOpen, onClose }: Props) {
   return (
     <div className={styles.overlay} onClick={onClose}>
       <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-        <header></header>
+        <header className={styles.header}>
+          <div className={styles.track}>
+            {/* 왼쪽 아이콘 */}
+            <div className={styles.icon}>
+              <img src={TestTube} alt="chemical engineering" />
+            </div>
+
+            {/* 트랙(점선) + 우주선 */}
+            <div className={styles.line}>
+              <span className={styles.dots} aria-hidden />
+              <img src={ShipPurple} className={styles.rocket} alt="rocket" />
+            </div>
+
+            {/* 오른쪽 아이콘 */}
+            <div className={styles.icon}>
+              <img src={Code} alt="frontend" />
+            </div>
+          </div>
+        </header>
 
         <section className={styles.body}>
           <p>
