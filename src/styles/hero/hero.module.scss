@@ -356,3 +356,73 @@
     offset-distance: 100%;
   }
 }
+
+/* 반응형 레이아웃*/
+
+/* 태블릿 이하 */
+@media (max-width: 1024px) {
+  .orbit {
+    width: 620px;
+  }
+
+  .orbitArea {
+    width: 620px;
+    height: calc(620px * 0.7);
+  }
+
+  .ship {
+    width: 44px;
+  }
+
+  .scroll {
+    width: 36px;
+    height: 64px;
+
+    .wheel {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .orbit {
+    width: 500px;
+  }
+
+  .orbitArea {
+    width: 500px;
+    height: calc(500px * 0.7);
+  }
+
+  .ship {
+    width: 40px;
+  }
+
+  .scroll {
+    width: 32px;
+    height: 58px;
+
+    .wheel {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+  .orbit {
+    width: 360px;
+  }
+
+  .orbitArea {
+    width: 360px;
+    height: calc(360px * 0.7);
+  }
+
+  .ship {
+    width: 36px;
+  }
+}

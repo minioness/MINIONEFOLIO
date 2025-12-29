@@ -2,36 +2,41 @@ import { useEffect, useState } from "react";
 import styles from "../../styles/hero/Hero.module.scss";
 import IntroTitle from "./IntroTitle";
 import type { HeroStep } from "../../types/hero";
+import {
+  HERO_CLUSTERS,
+  type HeroClusterKey,
+} from "../../constants/heroClusters";
 
-const clusters = [
-  // ── TOP 라인  ──
-  { left: "8%", top: "6%" },
-  { left: "28%", top: "3%" },
-  { left: "50%", top: "5%" },
-  { left: "72%", top: "3%" },
-  { left: "90%", top: "7%" },
+function getClusterKey(width: number): HeroClusterKey {
+  if (width <= 480) return "smallMobile";
+  if (width <= 768) return "mobile";
+  if (width <= 1024) return "tablet";
 
-  // ── LEFT 라인 ──
-  { left: "2%", top: "20%" },
-  { left: "0%", top: "38%" },
-  { left: "2%", top: "58%" },
-  { left: "4%", top: "78%" },
-
-  // ── RIGHT 라인 ──
-  { left: "76%", top: "22%" },
-  { left: "80%", top: "40%" },
-  { left: "78%", top: "62%" },
-  { left: "74%", top: "80%" },
-
-  // ── BOTTOM 라인 ──
-  { left: "18%", top: "88%" },
-  { left: "46%", top: "90%" },
-  { left: "70%", top: "87%" },
-];
+  return "desktop";
+}
 
 export default function Hero() {
+  // Hero 애니메이션 단계 관리
   const [step, setStep] = useState<HeroStep>("typing");
 
+  //현재 화면 크기에 맞는 clusters 키 상태
+  const [clusterKey, setClusterKey] = useState<HeroClusterKey>(() => {
+    if (typeof window === "undefined") return "desktop";
+
+    return getClusterKey(window.innerWidth);
+  });
+  // 화면 리사이즈에 따라 clusterKey를 갱신
+  useEffect(() => {
+    const onResize = () => {
+      setClusterKey(getClusterKey(window.innerWidth));
+    };
+
+    window.addEventListener("resize", onResize);
+
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  // orbit 단계가 시작되면 5초 뒤 scroll 단계로 넘어가기
   useEffect(() => {
     if (step !== "orbit") return;
 
@@ -43,7 +48,9 @@ export default function Hero() {
   }, [step]);
 
   const showOrbit = step !== "typing";
-  const showScroll = step == "scroll";
+  const showScroll = step === "scroll";
+
+  const clusters = HERO_CLUSTERS[clusterKey];
 
   return (
     <section id="hero" className={styles.hero}>
