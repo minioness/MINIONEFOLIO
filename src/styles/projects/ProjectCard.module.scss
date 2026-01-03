@@ -163,3 +163,57 @@
   opacity: 1;
   pointer-events: auto;
 }
+
+/* 반응형 레이아웃*/
+
+/* 태블릿 이하 */
+@media (max-width: 1024px) {
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .card {
+    padding: 2rem 1.2rem 1.2rem 2rem;
+  }
+
+  .btn {
+    position: static;
+    margin-top: 1.5rem;
+
+    opacity: 1;
+    pointer-events: auto;
+
+    margin-left: auto;
+    display: block;
+  }
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+  .card {
+    .header {
+      .thumbnail {
+        img {
+          width: 80px;
+          height: 80px;
+        }
+      }
+
+      .headText {
+        h3 {
+          font-size: 1.4rem;
+          line-height: 1.4rem;
+        }
+      }
+    }
+  }
+
+  .techs {
+    gap: 0.3rem;
+
+    .techIcon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
