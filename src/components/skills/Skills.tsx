@@ -16,7 +16,7 @@ export default function Skills() {
       {/* 본문 */}
       <div className={styles.body}>
         {SKILLS_DATA.map((section) => (
-          <article className={styles.skillCard}>
+          <article className={styles.skillCard} key={section.title}>
             <h2 className={styles.skillTitle}>{section.title}</h2>
 
             <div className={styles.skillArea}>
