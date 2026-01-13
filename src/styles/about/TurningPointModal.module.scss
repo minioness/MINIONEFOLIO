@@ -15,9 +15,69 @@
   border: 2px solid #404040;
   border-radius: 20px;
 
-  width: 800px;
+  width: 90%;
+  max-width: 800px;
 
   padding: 30px 35px;
+}
+
+.header {
+  margin-bottom: 0.8rem;
+
+  .track {
+    display: flex;
+
+    align-items: center;
+    gap: 1rem;
+
+    .icon {
+      width: 50px;
+      height: 50px;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .line {
+      position: relative;
+      flex: 1;
+      height: 18px;
+
+      .dots {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 0;
+        height: 18px;
+        overflow: hidden;
+
+        background-image: radial-gradient(circle, #d9d9d9 4px, transparent 4px);
+        background-size: 24px 18px;
+        background-repeat: repeat-x;
+        background-position: 0 50%;
+
+        animation: trailGrow 5s linear infinite;
+      }
+
+      .rocket {
+        position: absolute;
+
+        width: 40px;
+        height: 40px;
+
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+
+        animation: fly 5s linear infinite;
+      }
+    }
+  }
 }
 
 .body {
@@ -61,4 +121,50 @@
 
   display: block;
   margin: 0 auto;
+}
+
+@keyframes fly {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: calc(100% - 40px);
+  }
+}
+
+@keyframes trailGrow {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* 반응형 레이아웃*/
+
+/* 태블릿 이하 */
+@media (max-width: 1024px) {
+  .modal {
+    width: 90%;
+    max-width: 720px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .modal {
+    width: 90%;
+    max-width: 600px;
+  }
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+  .modal {
+    width: 90%;
+    max-width: 350px;
+  }
 }

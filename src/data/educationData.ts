@@ -42,8 +42,8 @@ export const EDUCATION_DATA: EducationYear[] = [
     year: 2026,
     items: [
       {
-        date: "-",
-        title: "Next...",
+        date: "",
+        title: "",
       },
     ],
   },

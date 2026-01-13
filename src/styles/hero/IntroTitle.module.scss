@@ -49,3 +49,39 @@
 .delay4 {
   animation-delay: 600ms;
 }
+
+/* 반응형 레이아웃*/
+
+// 테블릿 이하
+@media (max-width: 1024px) {
+  .heroText {
+    font-size: 3rem;
+  }
+
+  .introLine {
+    line-height: 1.15;
+  }
+}
+
+/* 모바일 */
+
+@media (max-width: 768px) {
+  .heroText {
+    font-size: 2.5rem;
+    padding: 0 20px; /* 좌우 여백 확보 */
+    text-align: center;
+  }
+
+  .introLine {
+    line-height: 1.2;
+  }
+}
+/* 작은 모바일 */
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+  .heroText {
+    font-size: 1.8rem;
+    padding: 0 16px;
+  }
+}

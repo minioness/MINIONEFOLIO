@@ -1,0 +1,43 @@
+.wrap {
+  position: fixed;
+  right: 28px;
+  bottom: 50px;
+  z-index: 50;
+
+  pointer-events: none;
+}
+
+.arrow {
+  width: 55px;
+  height: 55px;
+  border-radius: 999px;
+
+  border: 1px solid #8f8f8f;
+  background: #fbfaff;
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: auto;
+  cursor: pointer;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.isNotVisible {
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* 보일 때 애니메이션을 위해 기본 상태에도 transition */
+.wrap {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
