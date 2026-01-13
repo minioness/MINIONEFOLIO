@@ -19,6 +19,10 @@
   .closeBtn {
     position: absolute;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     cursor: pointer;
 
     right: 3%;
@@ -168,6 +172,28 @@
   .detailCard {
     width: 100%;
     max-width: 600px;
+
+    .items {
+      .list {
+        font-size: 1rem;
+        line-height: 1rem;
+
+        .listItem {
+          .text {
+            line-height: 1rem;
+          }
+          .subList {
+            font-size: 1rem;
+            line-height: 1rem;
+          }
+        }
+      }
+    }
+
+    .tag {
+      font-size: 0.9rem;
+      line-height: 1rem;
+    }
   }
 }
 
@@ -177,6 +203,28 @@
     max-width: 400px;
     border-radius: 22px;
     padding: 1.4rem 1.2rem 1rem;
+
+    .items {
+      .list {
+        font-size: 0.9rem;
+        line-height: 0.9rem;
+
+        .listItem {
+          .text {
+            line-height: 0.9rem;
+          }
+          .subList {
+            font-size: 0.9rem;
+            line-height: 0.9rem;
+          }
+        }
+      }
+
+      .tag {
+        font-size: 0.8rem;
+        line-height: 0.9rem;
+      }
+    }
   }
 
   .header {
@@ -190,18 +238,6 @@
 
     .period {
       font-size: 0.95rem;
-    }
-  }
-
-  .items {
-    .list {
-      font-size: 1rem;
-
-      .listItem {
-        .text {
-          line-height: 1.25rem;
-        }
-      }
     }
   }
 }

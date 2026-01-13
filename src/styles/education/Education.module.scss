@@ -224,6 +224,15 @@
     grid-template-columns: 1fr;
     position: relative;
 
+    .body {
+      .yearGroup {
+        .year {
+          font-size: 1.4rem;
+          line-height: 1.4rem;
+        }
+      }
+    }
+
     .sidePanel {
       display: block;
       width: 100%;
@@ -270,7 +279,6 @@
         font-size: 1.5rem;
         line-height: 1.5rem;
         padding: 0.75rem 1rem 0.6rem;
-        margin-top: 15px;
       }
     }
   }
@@ -284,6 +292,7 @@
 
     .titleArea {
       gap: 1rem;
+      margin-top: 15px;
 
       .title {
         font-size: 1.3rem;
@@ -292,12 +301,29 @@
       }
 
       .desc {
-        font-size: 1rem;
+        font-size: 0.8rem;
       }
     }
   }
 
-  .sidePanel {
-    padding: 12px;
+  .layout {
+    .body {
+      .yearGroup {
+        .items {
+          .item {
+            .itemDesc {
+              .title {
+                font-size: 1rem;
+                line-height: 1.3rem;
+              }
+            }
+          }
+        }
+      }
+
+      .sidePanel {
+        padding: 12px;
+      }
+    }
   }
 }
