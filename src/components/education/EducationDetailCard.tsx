@@ -17,7 +17,7 @@ export default function EducationDetailCard({
       className={`${styles.detailCard} ${isOpen ? styles.open : styles.closed}`}
     >
       <button type="button" onClick={onClose} className={styles.closeBtn}>
-        ✕
+        ✖️
       </button>
 
       {/* 헤더 */}

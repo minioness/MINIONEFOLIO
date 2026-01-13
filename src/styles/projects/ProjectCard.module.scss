@@ -179,8 +179,8 @@
 
       .headText {
         h3 {
-          font-size: 1.2rem;
-          line-height: 1.2rem;
+          font-size: 1.3rem;
+          line-height: 1.3rem;
         }
 
         p {
@@ -199,8 +199,8 @@
     gap: 0.3rem;
 
     .techIcon {
-      width: 28px;
-      height: 28px;
+      width: 27px;
+      height: 27px;
     }
   }
 }
@@ -228,13 +228,6 @@
       border-radius: 20px;
     }
   }
-
-  .techs {
-    .techIcon {
-      width: 27px;
-      height: 27px;
-    }
-  }
 }
 
 /* 작은 모바일 */
@@ -250,8 +243,8 @@
 
       .headText {
         h3 {
-          font-size: 1rem;
-          line-height: 1rem;
+          font-size: 1.2rem;
+          line-height: 1.2rem;
         }
       }
     }
