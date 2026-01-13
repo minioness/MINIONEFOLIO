@@ -42,7 +42,7 @@ export default function Hero() {
 
     const t = setTimeout(() => {
       setStep("scroll");
-    }, 5000);
+    }, 3500);
 
     return () => clearTimeout(t);
   }, [step]);
