@@ -142,3 +142,66 @@
   opacity: 0;
   transform: translateX(16px);
 }
+
+/* 반응형 레이아웃*/
+
+/* 태블릿 이하 */
+@media (max-width: 1024px) {
+  .detailCard {
+    width: 100%;
+    max-width: 600px;
+
+    transform: translateY(12px);
+  }
+
+  .closed {
+    transform: translateY(12px);
+  }
+
+  .open {
+    transform: translateY(0);
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .detailCard {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+  .detailCard {
+    max-width: 400px;
+    border-radius: 22px;
+    padding: 1.4rem 1.2rem 1rem;
+  }
+
+  .header {
+    border-left-width: 6px;
+    padding-left: 1rem;
+
+    .title {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+
+    .period {
+      font-size: 0.95rem;
+    }
+  }
+
+  .items {
+    .list {
+      font-size: 1rem;
+
+      .listItem {
+        .text {
+          line-height: 1.25rem;
+        }
+      }
+    }
+  }
+}
