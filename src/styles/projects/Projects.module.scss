@@ -78,6 +78,7 @@
 
       .gridArea {
         gap: 2.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
       }
     }
   }
@@ -120,6 +121,7 @@
         font-size: 1.3rem;
         line-height: 1.3rem;
         padding: 0.7rem 0.9rem 0.5rem;
+        margin-top: 15px;
       }
 
       .desc {

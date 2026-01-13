@@ -89,7 +89,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     id: "portfolio",
     title: "MINIONEFOLIO",
     subtitle: "프론트엔드 포트폴리오",
-    period: "2025.12.10 - 진행중",
+    period: "2025.12.10 - 2026.01.13",
     members: "1명",
     roles: ["기획", "디자인", "개발"],
     techs: ["TypeScript", "React", "Sass", "Vite", "Vercel"],
@@ -97,7 +97,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
 
     links: {
       gitHub: "https://github.com/minioness/MINIONEFOLIO",
-      web: "",
+      web: "https://minionefolio.vercel.app/",
     },
 
     notion: "",
