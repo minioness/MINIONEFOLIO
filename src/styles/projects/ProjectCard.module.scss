@@ -168,6 +168,41 @@
 
 /* 태블릿 이하 */
 @media (max-width: 1024px) {
+  .card {
+    .header {
+      .thumbnail {
+        img {
+          width: 70px;
+          height: 70px;
+        }
+      }
+
+      .headText {
+        h3 {
+          font-size: 1.2rem;
+          line-height: 1.2rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .info {
+      font-size: 0.8rem;
+      line-height: 1rem;
+    }
+  }
+
+  .techs {
+    gap: 0.3rem;
+
+    .techIcon {
+      width: 28px;
+      height: 28px;
+    }
+  }
 }
 
 /* 모바일 */
@@ -186,6 +221,20 @@
     margin-left: auto;
     display: block;
   }
+
+  .row {
+    .role {
+      padding: 0.4rem 0.8rem 0.2em;
+      border-radius: 20px;
+    }
+  }
+
+  .techs {
+    .techIcon {
+      width: 27px;
+      height: 27px;
+    }
+  }
 }
 
 /* 작은 모바일 */
@@ -194,23 +243,21 @@
     .header {
       .thumbnail {
         img {
-          width: 80px;
-          height: 80px;
+          width: 65px;
+          height: 65px;
         }
       }
 
       .headText {
         h3 {
-          font-size: 1.4rem;
-          line-height: 1.4rem;
+          font-size: 1rem;
+          line-height: 1rem;
         }
       }
     }
   }
 
   .techs {
-    gap: 0.3rem;
-
     .techIcon {
       width: 25px;
       height: 25px;
