@@ -21,7 +21,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     thumbnail: "/projectLogo/behindkit.png",
     links: {
       gitHub: "https://github.com/minioness/behindKit",
-      web: "",
+      web: "https://behind-kit.vercel.app/",
     },
 
     notion:
