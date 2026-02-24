@@ -1,5 +1,6 @@
 import styles from "../../styles/about/About.module.scss";
-import memoji from "../../assets/images/me.svg";
+// import memoji from "../../assets/images/me.svg";
+import frontend from "../../assets/images/frontend-icon.svg";
 import GitHub from "../../assets/icons/GItHub.svg";
 import Velog from "../../assets/icons/Velog.svg";
 import { useState } from "react";
@@ -18,12 +19,12 @@ export default function About() {
       <div className={styles.body}>
         {/* 왼쪽  내 정보 */}
         <div className={styles.LeftInfo}>
-          <img src={memoji} alt="memoji" className={styles.memoji} />
+          <img src={frontend} alt="icon" className={styles.memoji} />
 
           <div className={styles.profile}>
             <p>MIN HEE WON</p>
             <p>민희원</p>
-            <p>1995. 09. 29</p>
+            {/* <p>1995. 09. 29</p> */}
 
             <div className={styles.sns}>
               <a
@@ -50,7 +51,7 @@ export default function About() {
           <div className={styles.contact}>
             <h2 className={styles.detailTitle}>CONTACT</h2>
             <div className={styles.detail}>
-              <div className={styles.phoneNumber}>
+              {/* <div className={styles.phoneNumber}>
                 <p>전화번호</p>
                 <a
                   href="tel:01099748781"
@@ -58,7 +59,7 @@ export default function About() {
                 >
                   010. 9974. 8781
                 </a>
-              </div>
+              </div> */}
               <div className={styles.email}>
                 <p>이메일</p>
                 <a
@@ -73,10 +74,10 @@ export default function About() {
           <div className={styles.background}>
             <h2 className={styles.detailTitle}>BACKGROUND</h2>
             <div className={styles.detail}>
-              <div className={styles.address}>
+              {/* <div className={styles.address}>
                 <p>주소</p>
                 <p>경기도 화성시</p>
-              </div>
+              </div> */}
               <div className={styles.major}>
                 <p>학교·전공</p>
                 <p>경기대학교-화학공학</p>
