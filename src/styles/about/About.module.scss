@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: center;
 
-  gap: clamp(80px, 10vw, 200px);
+  gap: clamp(80px, 10vw, 100px);
   margin-top: 5rem;
 
   .LeftInfo {
@@ -35,8 +35,9 @@
     align-items: center;
 
     .memoji {
-      width: 300px;
+      width: 350px;
       height: auto;
+      margin-bottom: 3rem;
     }
 
     .profile {
